@@ -28,7 +28,7 @@ int main()
 }
 
 
-//lex.p1.l
+//lex p1.l
 //gcc lex.yy.c
 //./a.out
 //ctrl + d {if no output is seen}
