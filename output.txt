@@ -1,0 +1,14 @@
+identifier:a
+operator:=
+identifier:b
+separator:;
+
+identifier:b
+operator:=
+identifier:c
+separator:;
+
+identifier:c
+operator:=
+identifier:a
+separator:;

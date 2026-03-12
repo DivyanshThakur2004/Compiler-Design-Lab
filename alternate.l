@@ -1,28 +1,25 @@
 %{
-#include <stdio.h>
-int pos = 0;
+    #include <stdio.h>
 %}
-
 %%
-. { 
-    if (pos % 2 == 0) {
-        printf("%s", yytext);
-    }
-    pos++; 
-}
-
-\n { 
-    printf("\n");
-    pos = 0; 
-}
+[a-zA-Z0-9 ]+    {int n=yyleng;
+            for(int i = 0;i < n;i++){
+                if(i%2==0){
+                    printf("%c",yytext[i]);
+                }
+            }
+            printf("\n");
+        }
+.|\n    {printf("%s",yytext);}
 %%
 
-int yywrap() {
-    return 1;
-}
-
-int main() {
-    printf("Enter input string: ");
+int main(){
     yylex();
     return 0;
 }
+
+int yywrap(){
+    return 1;
+}
+
+// cd "/mnt/d/VS Code/compiler_design"
