@@ -25,6 +25,9 @@ int main(){
     return 0;
 }
 
+//we can also use REGEX </?[a-zA-Z][^>]*>
+
 int yywrap(){
     return 1;
+
 }
